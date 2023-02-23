@@ -1,8 +1,11 @@
 # STP23 LiDAR Serial Data Decoder
 
-Feb 23, 2023
+- Feb 23, 2023
+- This is an Arduino library for decoding the serial data of the STP-23 LiDAR distance sensor
 
 ## How to use?
+
+Here is an example for how to use `<stp23_lidar.h>`.
 
 ```cpp
 #include <Arduino.h>
@@ -31,7 +34,7 @@ void loop()
         {
             Serial.printf("%d ", lidar.get_lidar_measurement_array()[i].distance);
         }
-        // Serial.print(lidar.get_lidar_distance());
+        // Serial.print(lidar.get_lidar_distance()); // Or use this to get data
         // Serial.print(" ");
         Serial.print(t_duration);
         Serial.println();
